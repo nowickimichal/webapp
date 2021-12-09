@@ -1,0 +1,68 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+    <h1>Dane</h1>
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Created at</th>
+        <th>Gender</th>
+        
+        <th>Age</th>
+        <th>Weigth</th>
+        <th>Heigth</th>
+        <th>Q1</th>
+        <th>Q2</th>
+        <th>Q3</th>
+        <th>Q4</th>
+        <th>Q5</th>
+        <th>Q6</th>
+        <th>Q7</th>
+        <th>Q8</th>
+        <th>Q9</th>
+        <th>Q10</th>
+        <th>Q11</th>
+        <th>Q12</th>
+        
+        
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for element in formdata %}
+    <tr>
+        <td>{{ element.id }}</td>
+        <td>{{ element.created_at }}</td>
+        <td>{{ element.gender }}</td>
+        
+        <td>{{ element.age }}</td>
+        <td>{{ element.weigth }}</td>
+        <td>{{ element.heigth }}</td>
+        <td>{{ element.q1 }}</td>
+        <td>{{ element.q2 }}</td>
+        <td>{{ element.q3 }}</td>
+        <td>{{ element.q4 }}</td>
+        <td>{{ element.q5 }}</td>
+        <td>{{ element.q6 }}</td>
+        <td>{{ element.q7 }}</td>
+        <td>{{ element.q8 }}</td>
+        <td>{{ element.q9 }}</td>
+        <td>{{ element.q10 }}</td>
+        <td>{{ element.q11 }}</td>
+        <td>{{ element.q12 }}</td>
+     
+
+
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
+{% endblock %}

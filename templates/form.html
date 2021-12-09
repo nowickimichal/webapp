@@ -1,0 +1,241 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="page-header">
+  <h1>Proszę wypełnij formularz</h1>
+</div>
+
+<form role="form" action="/save" method="post">
+    <h3>Podstawowe dane</h3>
+    
+    <div class="form-group">
+      <label for="firstname">Imię:</label>
+      <input type="text" class="form-control" id="firstname" name="firstname" required>
+     </div>
+
+    <div class="form-group">
+        <label for="gender">Płeć:</label>
+        <select class="form-control" id="gender" name="gender">
+          <option>M</option>
+          <option>K</option>
+          <option>Inna</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Adres email:</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="age">Wiek:</label>
+        <input type="number" class="form-control" id="age" name="age" min="1" max="100" required>
+    </div>
+
+    <div class="form-group">
+      <label for="weigth">Waga:</label>
+      <input type="number" class="form-control" id="weigth" name="weigth" min="1" max="200" required>
+    </div>
+
+    <div class="form-group">
+      <label for="Heigth">Wzrost:</label>
+      <input type="number" class="form-control" id="heigth" name="heigth" min="1" max="250" required>
+    </div>
+
+
+
+
+    <b>Wybierz uczelnię:</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q1" value="1"> AGH
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q1" value="2"> UJ
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q1" value="3" checked> PK
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q1" value="4"> UR
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q1" value="5"> Other
+        </label>
+    </div>
+
+    <b>Wybierz charakter kieruku studiów</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="1"> Humanistyczne 
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="2"> Ścisłe
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="3" checked> Medyczne
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="4"> Artystyczne
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q2" value="5"> Inne
+        </label>
+    </div>
+
+
+    <h3>Ankieta</h3>
+    <b>Czy regularnie uprawiasz sport</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q3" value="1" checked> Tak
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q3" value="5"> Nie
+    </div>
+    
+    <b>Jak często uprawiasz sport</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q4" value="1"> Codziennie
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q4" value="2"> Kilka razy w tygodniu
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q4" value="3" checked> Kilka razy w miesiącu
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q4" value="4"> Rzadziej 
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q4" value="5"> Wogóle
+        </label>
+    </div>
+
+
+    <b>Gdzie najczęściej uprawiasz sport?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q5" value="5"> Siłownia
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q5" value="4"> Basen
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q5" value="3" checked> Na wolnym powietrzu
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q5" value="2"> W domu
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q5" value="1"> Wogóle
+        </label>
+    </div>
+
+    <b>Czy jesteś zadowolony ze swojej sylwetki?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q6" value="1"> Tak, bardzo
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q6" value="2"> Tak, w miarę
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q6" value="3" checked> Średnio
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q6" value="4"> Niezupełnie
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q6" value="5"> Nie
+        </label>
+    </div>
+
+    <b>Czy uważasz że twoja waga jest prawidłowa?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q7" value="1"> Tak
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q7" value="5"> Nie
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q7" value="3" checked> Nie mam zdania
+        </label>
+        
+    </div>
+
+
+    <b>Czy korzystałeś z usług dietetyka?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q8" value="1" checked> Tak
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q8" value="5"> Nie
+        </label>        
+    </div>
+
+    <b>Czy korzystałeś z usług trenera personalnego?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q9" value="1" checked> Tak
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q9" value="5"> Nie
+        </label>        
+    </div>
+
+
+    <b>Czy wiesz jakie mogą być skutki otyłości?</b>
+    <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="q10" value="1"> Tak
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q10" value="5"> Nie
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="q10" value="3" checked> Nie mam zdania
+        </label>  
+    </div>
+
+
+    <b>Czy zdajesz sobie sprawę jakie mogą być skutki nieprawidłowej diety?</b>
+    <div class="form-group">
+      <label class="radio-inline">
+        <input type="radio" name="q11" value="1"> Tak
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="q11" value="5"> Nie
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="q11" value="3" checked> Nie mam zdania
+      </label>  
+    </div>
+
+    <b>Czy zdajesz sobie sprawę jakie mogą być skutki braku aktywności?</b>
+    <div class="form-group">
+      <label class="radio-inline">
+        <input type="radio" name="q12" value="1"> Tak
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="q12" value="5"> Nie
+      </label>
+      <label class="radio-inline">
+        <input type="radio" name="q12" value="3" checked> Nie mam zdania
+      </label>  
+    </div>
+
+    
+
+
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+{% endblock %}
+
